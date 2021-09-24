@@ -20,6 +20,7 @@ body
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 
     backdrop-filter: blur(5px);
 }
@@ -39,7 +40,6 @@ body
 .slider-wrapper
 {
     padding: 0 20px;
-    /* overflow: hidden; */
 
     display: flex;
     flex-flow: row nowrap;
