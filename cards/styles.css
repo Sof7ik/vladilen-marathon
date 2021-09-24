@@ -1,0 +1,159 @@
+*, *::before, *::after
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+}
+
+body
+{
+    min-width: 320px;
+    min-height: 568px;
+
+    background-image: url('https://i.artfile.ru/1920x1200_681856_[www.ArtFile.ru].jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    backdrop-filter: blur(5px);
+}
+
+.page-wrapper
+{
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-wrapper
+{
+    padding: 0 20px;
+    /* overflow: hidden; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-self: center;
+    height: 80vh;
+
+    width: 100%;
+
+    padding-bottom: 10px;
+}
+@media screen and (max-width: 768px) 
+{
+    .slider-wrapper
+    {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-self: center;
+    }  
+}
+@media screen and (max-height: 700px)
+{
+    .slider-wrapper
+    {
+        height: 80%;
+    }
+} 
+
+.slider-wrapper .slide
+{
+    cursor: pointer;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin-left: 20px;
+
+    flex: 1;
+
+    position: relative;
+
+    border-radius: 20px;
+
+    transition: flex-grow .4s, box-shadow .3s;
+}
+@media screen and (max-width: 768px) 
+{
+    .slider-wrapper .slide
+    {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
+.slider-wrapper .slide:focus-visible
+{
+    outline: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.slider-wrapper .slide:first-child
+{
+    margin-left: 0;
+}
+@media screen and (max-width: 768px) 
+{
+    .slider-wrapper .slide:first-child
+    {
+        margin-top: 0;
+    }
+}
+
+.slider-wrapper .slide span
+{
+    display: block;
+    max-width: 60%;
+
+    opacity: 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.02em;
+
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+
+    pointer-events: none;
+}
+@media screen and (max-width: 768px) 
+{
+    .slider-wrapper .slide span
+    {
+        font-size: 18px; 
+    }
+}
+@media screen and (max-width: 450px) 
+{
+    .slider-wrapper .slide span
+    {
+        min-width: 80%;
+    }
+}
+
+.slider-wrapper .slide.active
+{
+    flex: 10;
+    box-shadow: none;
+}
+
+.slider-wrapper .slide.active span
+{
+    opacity: 1;
+    transition: opacity .3s .3s;
+}
