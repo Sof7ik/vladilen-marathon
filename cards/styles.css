@@ -71,6 +71,9 @@ body
 .slider-wrapper .slide
 {
     cursor: pointer;
+    user-select: none;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     background-position: center;
     background-size: cover;
