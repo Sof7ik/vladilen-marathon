@@ -97,6 +97,13 @@ body
         margin-left: 0;
     }
 }
+@media screen and (max-width: 450px) 
+{
+    .slider-wrapper .slide
+    {
+        flex: 2;
+    }
+}
 .slider-wrapper .slide:focus-visible
 {
     outline: none;
@@ -113,6 +120,12 @@ body
     {
         margin-top: 0;
     }
+}
+
+.slider-wrapper .slide.active
+{
+    flex: 10;
+    box-shadow: none;
 }
 
 .slider-wrapper .slide span
@@ -148,12 +161,6 @@ body
         min-width: 80%;
         bottom: 15px;
     }
-}
-
-.slider-wrapper .slide.active
-{
-    flex: 10;
-    box-shadow: none;
 }
 
 .slider-wrapper .slide.active span
