@@ -143,6 +143,7 @@ body
     .slider-wrapper .slide span
     {
         min-width: 80%;
+        bottom: 15px;
     }
 }
 
