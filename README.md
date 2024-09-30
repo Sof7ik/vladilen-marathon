@@ -1,5 +1,5 @@
 # vladilen-marathon
-5-дневный марафон по JS-разработке от [vladilen.ru](vladilen.ru)
+5-дневный марафон по JS-разработке от [Result School](https://result.school/)
 
 ## Ссылки на проекты
 * [Карточки](https://sof7ik.github.io/vladilen-marathon/cards)
